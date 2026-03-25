@@ -1,0 +1,19 @@
+1. Compute the response time and turnaround time when running 
+three jobs of length 200 with the SJF and FIFO schedulers.
+  When the three jobs are all length 200, FIFO and SJF give the same result because every job is the same size. For both schedulers, Job 0 has a response time of 0 and a turnaround time of 200. Job 1 has a response time of 200 and a turnaround time of 400. 
+Job 2 has a response time of 400 and a turnaround time of 600. The average response time is 200 and the average turnaround time is 400.
+
+2. Now do the same but with jobs of different lengths: 100, 200, and 300.
+  For the jobs 100, 200, and 300, FIFO and SJF also give the same result because the jobs are already listed from shortest to longest. Job 0 has a response time of 0 and a turnaround time of 100. Job 1 has a response time of 100 and a turnaround time of 300. 
+Job 2 has a response time of 300 and a turnaround time of 600. The average response time is 133.33 and the average turnaround time is 333.33.
+
+3.  Now do the same, but also with the RR scheduler and a time-slice of 1
+  With Round Robin and a time slice of 1, the response times are much smaller because each job gets a chance to run almost right away. Job 0 has a response time of 0, turnaround time of 298, and wait time of 198. 
+Job 1 has a response time of 1, turnaround time of 499, and wait time of 299. Job 2 has a response time of 2, turnaround time of 600, and wait time of 300. The average response time is 1.00, the average turnaround time is 465.67, and the average wait time is 265.67.
+
+4.  For what types of workloads does SJF deliver the same turnaround times as FIFO?
+  SJF gives the same turnaround times as FIFO when the jobs are already in shortest-job-first order, or when all of the jobs are the same length. In those cases, both schedulers end up running the jobs in the same order.
+
+5. For what types of workloads and quantum lengths does SJF deliver the same response times as RR?
+  SJF gives the same response times as RR only in special cases. This happens when the jobs are already arranged in shortest-job-first order and the quantum is large enough that RR behaves like FIFO. 
+If the quantum is very small, like 1, RR usually has much better response time because every job starts almost immediately.
