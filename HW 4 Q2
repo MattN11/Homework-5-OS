@@ -1,0 +1,40 @@
+Read Ch. 18 https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf 
+For each of the following hardware specification and software configuration, state how many bits are needed for a) Virtual address, b) Physical address, c) Virtual page number, d) Physical page number, e) Offset
+32-bit operating system, 4-KB pages, 1 GB of RAM
+32-bit operating system, 16-KB pages, 2 GB of RAM
+64-bit operating system, 16-KB pages, 16 GB of RAM
+Note: you need to show the calculation to get full credits 
+Note2: you need to show 15 numbers
+Key concepts: page, virtual and physical address format
+
+Calculations:
+Virtual address bits = given by the OS/address-space size
+Physical address bits = log2
+offset bits = log 2
+VPN = Virtual address bits - offset bits
+PFN = bits Physical address bits - Offset bits
+	​
+
+
+1. 32 bit operating system, 4-kb pages, 1 gb of ram
+
+a) Virtual address = 32 bits
+b) Page size = 4KB = 4096 bytes = 2^12
+  Physical Address = 30 bits
+c) Virtual page number(VPN) = 32 - 12 = 20 bits 
+d) Physical page number (PFN) = 18 bits
+e) offset = 12 bits
+
+2. 32-bit operating system, 16-KB pages, 2 GB of RAM
+
+a) Virtual address bits  = 32
+b) page size 16 KB = 16384 bytes = 2^14 
+  Ram = 2 GB = 2^31 = Physical Adress = 31 bits
+c) VPN = 32 - 14 = 18 bits
+d) PFN = 31 - 14 = 17 bits
+
+3. 64-bit operating system, 16-KB pages, 16 GB of RAM
+  a) Virtual address = 64 
+  b) Ram = 16 gb = 2^34 = Physical address = 34 bits
+  c) VPN = 64 - 14 = 50 bits
+  d) 34 - 14 = 20 bits
